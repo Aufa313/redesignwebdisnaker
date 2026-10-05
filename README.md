@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Disnaker Sleman Redesign
 
-## Getting Started
+Landing page redesign untuk website Dinas Ketenagakerjaan Kabupaten Sleman dengan konsep modern, bersih, mudah dibaca, dan tetap formal untuk kebutuhan layanan publik.
 
-First, run the development server:
+## Fitur
+
+- Hero section dengan headline kuat dan CTA
+- Layanan utama berbasis kartu besar
+- Halaman profil dinas dan struktur organisasi
+- Halaman layanan publik yang rapi dan mudah dibaca
+- Section berita dan pengumuman
+- Lowongan kerja terbaru
+- Program unggulan dan pendampingan masyarakat
+- Desain responsif untuk desktop dan mobile
+- Visual modern dengan kombinasi gradient, foto, dan elemen UI yang ringan
+
+## Tech Stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+
+## Prasyarat
+
+Pastikan sudah terinstall:
+
+- Node.js 18+
+- npm
+
+## Cara Menjalankan
+
+1. Clone repository
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Jalankan development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Buka browser ke:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Struktur Proyek
 
-## Learn More
+```bash
+app/
+  berita/
+  kontak/
+  layanan/
+  lowongan/
+  profil-dinas/
+  struktur-organisasi/
+  globals.css
+  layout.tsx
+  page.tsx
+components/
+  Footer.tsx
+  Hero.tsx
+  Navbar.tsx
+  QuickServices.tsx
+  DetailShell.tsx
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Catatan Desain
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Proyek ini dibuat dengan referensi dari situs resmi Disnaker Sleman, namun diperbarui agar tampil lebih modern, ringkas, dan mudah dipahami. Fokus utamanya adalah:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- keterbacaan tinggi
+- hierarki informasi jelas
+- nuansa formal tapi tetap hidup
+- penggunaan warna hijau/emerald dan biru untuk kesan profesional dan akrab
 
-## Deploy on Vercel
+## Build Production
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+```
