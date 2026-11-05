@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, type ComponentProps } from "react";
+import Image, { type ImageProps } from "next/image";
+import { useState } from "react";
 
-type SafeImageProps = ComponentProps<"img"> & {
+type SafeImageProps = ImageProps & {
   fallbackSrc?: string;
 };
 
@@ -18,10 +19,12 @@ export default function SafeImage({
   const [imageSrc, setImageSrc] = useState(src);
 
   return (
-    <img
+    <Image
       {...props}
       alt={alt}
       src={imageSrc}
+      width={props.width ?? 1600}
+      height={props.height ?? 900}
       onError={(event) => {
         onError?.(event);
         if (imageSrc !== fallbackSrc) {

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const slides = [
   {
@@ -8,7 +9,7 @@ const slides = [
     alt: "Gedung Dinas Ketenagakerjaan Kabupaten Sleman",
   },
   {
-    image: "/asset/IMG_3615.jpg",
+    image: "/asset/IMG_3615.webp",
     alt: "Pelayanan Dinas Ketenagakerjaan Kabupaten Sleman",
   },
 ];
@@ -35,10 +36,14 @@ export default function BannerCarousel() {
     >
       <div className="relative h-[calc(100svh-76px)] min-h-[420px] w-full">
         {slides.map((slide, index) => (
-          <img
+          <Image
             key={slide.image}
             src={slide.image}
             alt={slide.alt}
+            fill
+            sizes="100vw"
+            preload={index === 0}
+            loading={index === 0 ? undefined : "lazy"}
             aria-hidden={index !== activeIndex}
             className={`pointer-events-none absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
               index === activeIndex ? "opacity-100" : "opacity-0"

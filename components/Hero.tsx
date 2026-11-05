@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 const stats = [
   { value: "3.4K+", label: "Perusahaan" },
   { value: "12.8K+", label: "Pencari kerja" },
@@ -14,12 +17,16 @@ export default function Hero() {
   return (
     <section
       className="relative isolate overflow-hidden bg-slate-950 text-white"
-      style={{
-        backgroundImage: "url('/asset/images.jpg')",
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-      }}
     >
+      <Image
+        src="/asset/images.jpg"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="z-0 object-cover"
+        aria-hidden="true"
+      />
       <div className="absolute inset-0 z-0 bg-slate-950/55" />
       <div className="absolute inset-0 z-0 bg-gradient-to-br from-slate-950/95 via-slate-950/65 to-emerald-950/35" />
       <div className="absolute inset-0 z-0 opacity-20 [background-image:linear-gradient(rgba(255,255,255,0.18)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.18)_1px,transparent_1px)] [background-size:44px_44px]" />
@@ -46,18 +53,18 @@ export default function Hero() {
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <a
+            <Link
               href="/layanan"
               className="inline-flex items-center justify-center rounded-full bg-emerald-400 px-6 py-3.5 text-base font-bold text-slate-950 shadow-xl shadow-emerald-500/20 transition hover:bg-emerald-300"
             >
               Jelajahi layanan <span className="ml-2 text-lg">↗</span>
-            </a>
-            <a
+            </Link>
+            <Link
               href="/lowongan"
               className="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/10 px-6 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition hover:bg-white/20"
             >
               Lihat lowongan kerja
-            </a>
+            </Link>
           </div>
 
           <div className="mt-12 grid max-w-xl grid-cols-3 divide-x divide-white/15 border-y border-white/15 py-5">
